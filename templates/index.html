@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <!--DAFULT SETTINGS FUNDATION-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="../static/css/foundation.css" />
+
+    <!--GOOGLE MAPS API INIT-->
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaXfj1pBgrLwluZSDWb8FxJ0l_cuj-PSw&sensor=TRUE">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>TwitterMap</h1>
+        <h3>by Gustavo Blanco & Michael De La Torre</h3>
+      </div>
+    </div>
+
+    <form>
+      <div class="row">
+        <div class="large-4 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              <input type="text" placeholder="">
+            </div>
+            <div class="small-2 columns">
+              <a href="#" class="button postfix">Go</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div id="map-canvas"/>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>
